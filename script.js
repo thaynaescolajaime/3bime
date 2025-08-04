@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
-    const botaoDeAcessibilidade document.getElementById('aumentar-fonte');
-    const opcoesDeAcessibilidade document.getElementById('diminuir-fonte');
+    const botaoDeAcessibilidade = document.getElementById('aumentar-fonte');
+    const opcoesDeAcessibilidade = document.getElementById('diminuir-fonte');
 
 botaoDeAcessibilidade.addEventListener('click', function (){
  botaoDeAcessibilidade.classList.toggle('rotacao-botao');
@@ -23,3 +23,13 @@ botaoDeAcessibilidade.addEventListener('click', function (){
     })
 
 })
+
+ alternaContraste.addEventListener('click', function(){
+         document.body.classList.toggle('alto-contraste')
+ }) //Código omitido
+
+const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
+botaoDeAcessibilidade.setAttribute('aria-expanded', !botaoSelecionado)
+
+//Código omitido
+<section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
